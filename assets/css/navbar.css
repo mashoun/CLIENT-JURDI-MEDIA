@@ -1,0 +1,12 @@
+.offcanvas {
+    width: 85% !important;
+}
+
+.menu {
+    display: none;
+}
+
+header > nav {
+    display: flex;
+    width: fit-content;
+}

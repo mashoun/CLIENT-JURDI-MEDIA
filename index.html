@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <!-- Developed by lebancode.com / Mahmoud Mashoun -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JURDI MEDIA PRODUCTION CONSULTANTS LLC</title>
+    <meta name="title" content="JURDI MEDIA PRODUCTION CONSULTANTS LLC">
+    <meta name="description"
+        content="A Production Consultancy and Niche Media Services Firm that Caters to Businesses Engaged or Looking to Engage In Media and Entertainment Business in America, the Middle East and North African Markets">
+    <meta name="keywords"
+        content="Middle east media sector, digital media publishers, performing artists middle east, production consultancy middle east, media production saudi arabia, media production dubai united arab emirates, stunt middle east, historical research middle east, drama research middle east, setting up a media business middle east, setting up a production company middle east , production houses lebanon, production studios dubai, and broadcasters middle east. Media business engages regional International MENA region. media production regulatory and legal frameworks, conventional media to metaverse. legal and business affairs of content development, production middle east, content distribution Middle East, North Africa & Turkey, independent and trusted legal advisors middle east, lebanon lawyers, lebanese media lawyer, netflix lebanon, middle east  joint ventures and in media-related tax incentives, middle east financing and rebate schemes. Stunts coordination middle east, stunt regulatory framework middle east. Saraya abdeen, finding ola, jinn, omar series, mbc lawyer middle east, netflix lawyer middle east, abla fahita netflix, paranormal netflix. Fadi el jurdi, fadi jurdi, nidal jurdi, fadia jurdi, new york arabic media consultant, usa arabic media consultant,  usa arabic media consultant middle east">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Fadi ElJurdi">
+
+
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script async>
+        window.addEventListener('offline', () => alert('You are offline ! Please Refresh'));
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX3DMM1SCJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-DX3DMM1SCJ');
+    </script>
+</head>
+
+<body id="app">
+
+    <section v-if="spinner"
+        class="w-100 h-100 bg-glass position-fixed top-0 start-0 z-100 d-flex justify-content-center align-items-center flex-column gap-4">
+
+        <img src="/assets/img/logo.png" alt="Jurdi Media" class="img-fluid" width="100">
+
+        <div class="spinner-grow text-secondary" role="status"></div>
+    </section>
+
+
+    <navbar :whatsapp="profile.whatsapp" :linked="profile.linkedIn" :webinar="profile.webinar"> </navbar>
+    <hero :bio="profile.bio" :heading="profile.heading"></hero>
+
+
+    <section class="container d-flex gap-2 align-items-center flex-wrap px-2">
+        <section v-for="t in profile.tags">
+            <section class="d-flex gap-2 px-3 py-2 shadow-sm rounded pop text-secondary point" data-bs-toggle="modal"
+                :data-bs-target="'#'+t.id" @click="dotmark(t.description,'tag-body-'+t.index)">
+                <span class="material-symbols-outlined text-warning">link</span>
+                <span> {{t.title}} </span>
+            </section>
+            <!-- Modal -->
+            <div class="modal fade" :id="t.id" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel"> {{t.title}} </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img :src="t.url" :alt="t.title" class="img-fluid rounded shadow-sm mb-3">
+                            <div :id="'tag-body-'+t.index"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <hr class="container">
+    <section class="w-100 d-flex gap-3 container flex-wrap justify-content-center my-5">
+        <card v-for="s in services" :key="s.title" :src="s.url" :text="s.title" class="point" @click="href(s.title)" />
+    </section>
+
+    <hr class="container">
+    <contact-section :profile="profile"></contact-section>
+
+    <footer-section></footer-section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+        </script>
+
+    <script src="/assets/js/vue.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
+</body>
+
+</html>

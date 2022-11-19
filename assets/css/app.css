@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+.pop {
+    font-family: "Poppins", sans-serif;
+}
+
+.cin {
+    font-family: 'Cinzel', serif;
+
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* .sans {
+  font-family: "Open Sans", sans-serif;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+:root {
+    --blight: #edf2fb;
+    --dark-x: #1d3557;
+    --second-x: #415a77;
+    --edit: #02c39a;
+}
+
+a {
+    text-decoration: none !important;
+    /* color: inherit !important; */
+}
+
+/* General purpose classes */
+.point {
+    cursor: pointer;
+}
+
+.cover {
+    object-fit: cover !important;
+}
+
+.text-dark-x {
+    color: var(--dark-x);
+}
+
+.bg-dark-x {
+    background-color: var(--dark-x);
+}
+
+.text-second-x {
+    color: var(--second-x);
+}
+
+.bg-second-x {
+    background-color: var(--second-x);
+}
+
+.bg-tag {
+    background-color: #edf2fb;
+
+}
+.img-grey{
+    filter: grayscale(0.7);
+}
+
+.w-fit {
+    width: fit-content !important;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.lhv:hover {
+    letter-spacing: 2px;
+}
+
+.bg-blight {
+    background-color: var(--blight) !important;
+}
+
+.fs-small {
+    font-size: small;
+}
+
+.fs-smaller {
+    font-size: smaller;
+}
+
+.fs-x-small {
+    font-size: x-small;
+}
+
+.hero-text{
+text-align: center;
+}
+.text-edit {
+    color: var(--edit);
+}
+
+.bg-glass {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.09) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    /* border: 1px solid rgba(255, 255, 255, 0.12); */
+}
+
+/* SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--second-x);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e63946;
+}
+
+.z-100 {
+    z-index: 100;
+}

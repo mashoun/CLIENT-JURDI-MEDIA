@@ -1,0 +1,18 @@
+/* RESPONSIVE */
+@media (max-width:1000px) {
+    .menu {
+        display: block !important;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+}
+
+@media (max-width:600px) {
+    .hero-text {
+        text-align: center;
+    }
+
+}
